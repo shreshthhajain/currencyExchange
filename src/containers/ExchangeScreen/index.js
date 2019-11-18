@@ -123,10 +123,10 @@ class ExchangeScreen extends React.Component {
   }
 
   render() {
-    let currencyRate = '';
-    if(this.refs.currencyRate) {
-      currencyRate = this.props.rates[this.state.fromCurrency]/this.props.rates[this.state.toCurrency];
-      this.refs.currencyRate.innerHTML = `1${currencyLogos[this.state.fromCurrency]} = ${Math.round((1/currencyRate) *10000)/10000}${currencyLogos[this.state.toCurrency]}`;
+    let currencyRateText = '';
+    if (this.props.rates) {
+       const currencyRate = this.props.rates[this.state.fromCurrency]/this.props.rates[this.state.toCurrency];
+       currencyRateText = `1${currencyLogos[this.state.fromCurrency]} = ${Math.round((1/currencyRate) *10000)/10000}${currencyLogos[this.state.toCurrency]}`;
     }
     if (this.state.isCurrencyExchanged) {
       return (
@@ -149,7 +149,7 @@ class ExchangeScreen extends React.Component {
         />
         <div style={{marginTop: '-10px',position: 'absolute', width: '90%'}}>
           <img id="toggleCurrency" src={currencyToggle} style={{paddingLeft:'10px',paddingRight:'40%'}} alt="Currency Toggle" width="20" height="20" onClick={() => this.toggleCurrency()}/>
-          <span id="currencyRate" contentEditable='true' ref='currencyRate' style={spanStyle}></span>
+          <span id="currencyRate" contentEditable='true' ref='currencyRate' style={spanStyle} dangerouslySetInnerHTML={{__html: currencyRateText}}></span>
         </div>
         <CurrencyDisplay
           currency={this.state.toCurrency}
