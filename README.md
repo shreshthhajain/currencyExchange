@@ -2,7 +2,8 @@
 
 In the project directory, you can run:
 
-Install dependencies using "yarn install".
+Install dependencies using 
+### `yarn install`
 
 Run the application using
 ### `yarn start`
