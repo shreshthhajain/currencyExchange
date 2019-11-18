@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeScreen should render correctly 1`] = `
+<div>
+  <CurrencyDisplay
+    amount=""
+    amountChange={[Function]}
+    balance={100}
+    currency="GBP"
+    onChangeCurrency={[Function]}
+    prefix="-"
+    readOnly={false}
+  />
+  <div
+    style={
+      Object {
+        "marginTop": "-10px",
+        "position": "absolute",
+        "width": "90%",
+      }
+    }
+  >
+    <img
+      alt="Currency Toggle"
+      height="20"
+      id="toggleCurrency"
+      onClick={[Function]}
+      src="currencyToggle.jpg"
+      style={
+        Object {
+          "paddingLeft": "10px",
+          "paddingRight": "40%",
+        }
+      }
+      width="20"
+    />
+    <span
+      contentEditable="true"
+      id="currencyRate"
+      style={
+        Object {
+          "border": "2px solid lightgray",
+          "borderRadius": "10px",
+          "color": "blue",
+          "margin": "0",
+          "padding": "0px 10px",
+        }
+      }
+    />
+  </div>
+  <CurrencyDisplay
+    amount=""
+    amountChange={[Function]}
+    balance={100}
+    currency="EUR"
+    onChangeCurrency={[Function]}
+    prefix="+"
+    readOnly={true}
+  />
+  <input
+    disabled={true}
+    id="exchange-button"
+    onClick={[Function]}
+    style={
+      Object {
+        ":disabled": Object {
+          "opacity": "0.5",
+        },
+        "backgroundColor": "deeppink",
+        "border": "none",
+        "borderRadius": "15px",
+        "color": "#fff",
+        "display": "block",
+        "fontWeight": "bold",
+        "height": "30px",
+        "marginTop": "20px",
+        "width": "100%",
+      }
+    }
+    type="button"
+    value="Exchange"
+  />
+</div>
+`;

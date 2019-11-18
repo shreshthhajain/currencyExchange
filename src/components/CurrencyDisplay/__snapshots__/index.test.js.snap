@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyDisplay should render correctly 1`] = `
+<div
+  className="outerDiv"
+  style={
+    Object {
+      "backgroundColor": "#fff",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <select
+      className="selectStyle"
+      onChange={[Function]}
+      value="EUR"
+    >
+      <option
+        value="EUR"
+      >
+        EUR
+      </option>
+      <option
+        value="USD"
+      >
+        USD
+      </option>
+      <option
+        value="GBP"
+      >
+        GBP
+      </option>
+    </select>
+    <input
+      className="inputStyle"
+      onChange={[Function]}
+      placeholder="0"
+      readOnly={false}
+      type="number"
+      value={1}
+    />
+  </div>
+  <div>
+    Balance: 
+    <span
+      className=""
+    >
+      <IntlProvider
+        defaultFormats={Object {}}
+        defaultLocale="en"
+        formats={Object {}}
+        locale="en"
+        messages={Object {}}
+        onError={[Function]}
+        textComponent={Symbol(react.fragment)}
+      >
+        <FormattedNumber
+          currency="EUR"
+          style="currency"
+          value={100}
+        />
+      </IntlProvider>
+    </span>
+     
+  </div>
+</div>
+`;

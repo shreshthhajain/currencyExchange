@@ -1,0 +1,41 @@
+.inputStyle::placeholder {
+    color: lightgray;
+}
+
+.invalidBalance {
+    color:red;
+}
+
+.inputStyle {
+    border: none;
+    background: inherit;
+    text-align: end;
+}
+
+.inputStyle:hover, .inputStyle:focus, .selectStyle:focus, .selectStyle:hover {
+    border: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.selectStyle {
+    background: inherit;
+    border: none;
+    font-weight: bold;
+    margin-left: -4px;
+}
+
+.outerDiv { 
+    padding: 20px 10px 20px 10px;
+    height: 70px;
+    line-height: 30px;
+}
