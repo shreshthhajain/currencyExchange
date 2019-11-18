@@ -36,6 +36,11 @@ exports[`ExchangeScreen should render correctly 1`] = `
     />
     <span
       contentEditable="true"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "1&#163; = 0.8538&#8364;",
+        }
+      }
       id="currencyRate"
       style={
         Object {
