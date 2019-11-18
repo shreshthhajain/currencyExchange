@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import CurrencyDisplay from '../../components/CurrencyDisplay';
 import Radium from 'radium';
 import currencyToggle from './currencyToggle.jpg';
+import _ from 'lodash';
 
 const buttonStyle = {
   width: '100%',
@@ -47,7 +48,21 @@ class ExchangeScreen extends React.Component {
 
   componentDidMount(){
     this.props.getCurrentCurrencyRate();
-    setInterval(() => this.props.getCurrentCurrencyRate(), 10000);
+    this.interval = setInterval(() => this.props.getCurrentCurrencyRate(), 10000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (!_.isEqual(this.state, nextState)) {
+      return true;
+    } else if (!_.isEqual(this.props, nextProps)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   restrictDecimalPlaces(enteredAmount) {
